@@ -1,0 +1,52 @@
+
+<div class="body">
+    <form [formGroup]="SignupForm"(ngSubmit)="OnSignup()">
+    <mat-card class="card1" appearance="outlined">
+        <mat-card-content>
+            <img class="login_image" src="../../assets/images/login_image.png" alt="login_image">
+            <h2 class="font_size">ONLINE BOOKING SHOPPING</h2>
+        </mat-card-content>
+      </mat-card>
+<mat-card class="card2" appearance="outlined">
+    <mat-card-content>
+        <div class="login_signup_buttons">
+            <button class="login_page_button" routerLink="/login"> 
+                <h2 style="color: gray;" >LOGIN</h2>
+            </button>
+            <button class="login_page_button">
+                <h2>SIGNUP</h2>
+            </button>
+        </div>
+        <div class="fields">
+            <div class="form_fields">
+                <label >Full Name</label>
+                <div>
+                    <input  class="form_fields1" matInput placeholder="Full Name" formControlName="fullName" >
+                   </div>
+            </div>
+            <div class="form_fields">
+                <label >Email Id</label>
+                <div>
+                    <input  class="form_fields1" matInput placeholder="Email" formControlName="email" >
+                   </div>
+            </div>
+            <div class="form_fields">
+                <label >Password</label>
+               <div>
+                 <input  class="form_fields1" type="password" placeholder="Password" formControlName="password">
+               </div>
+            </div>
+            <div class="form_fields">
+                <label >Mobile Number</label>
+               <div>
+                 <input  class="form_fields1" type="number" matInput placeholder="Mobile Number" formControlName="mobile">
+               </div>
+            </div>
+             <div>
+               <button class="login_button" mat-flat-button>Signup</button>
+             </div>
+        </div>
+    </mat-card-content>
+  </mat-card>
+</form>
+</div>

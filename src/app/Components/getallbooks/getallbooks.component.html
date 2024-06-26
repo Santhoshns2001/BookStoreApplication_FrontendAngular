@@ -1,0 +1,53 @@
+<div class="head">
+    <div class="title">
+        <h1 style="margin-top: 9px;">Books</h1>
+        <span>(8 Books)</span>
+    </div>
+    <div>
+        <button mat-button [matMenuTriggerFor]="menu" style="width: 150px; padding-top: 7px; border: 1px solid rgb(193, 179, 179);">
+            <h5 style="font-size: 13px; margin-top: 3px;" >Sort by relevance</h5>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <span>Price: Low to High</span>
+            </button>
+            <button mat-menu-item>
+              <span>Price: High to Low</span>
+            </button>
+            <button mat-menu-item>
+              <span>Newest Arrivals</span>
+            </button>
+        </mat-menu>
+    </div>
+</div>
+
+<div class="getall_body">
+  <div *ngFor="let books of booksList" >
+    <mat-card class="card" appearance="outlined">
+      <div class="image_sec">
+        <img class="image" src="{{books.image}}" alt="img">
+      </div>
+        <div class="s2">
+             <p class="title_sec">{{books.title}}</p>
+             <p class="author_sec">{{books.author}}</p>
+             <div class="rating_count">
+                <div class="rating_sec">
+                  <p class="star">{{books.rating}} </p><img  src="../../assets/png/star.svg" alt="star">
+                </div>
+               <div>
+                <p style="color: rgb(176, 173, 173);">({{books.ratingCount}})</p>
+               </div>
+             </div>
+             <div class="price_sec">
+                <div> 
+                   <p class="price">RS. {{books.price}}</p>
+                </div>
+                <div class="originalprice">
+                    <s >RS. {{books.originalPrice}}</s>
+                </div>
+             </div>
+            
+        </div>
+    </mat-card>
+  </div>
+</div>

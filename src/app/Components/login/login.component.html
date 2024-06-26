@@ -1,0 +1,54 @@
+<div class="body">
+    <form [formGroup]="Loginform" (ngSubmit)="OnLogin()">
+    <mat-card class="card1" appearance="outlined">
+        <mat-card-content>
+            <img class="login_image" src="../../assets/images/login_image.png" alt="login_image">
+            <h2 class="font_size">ONLINE BOOKING SHOPPING</h2>
+        </mat-card-content>
+      </mat-card>
+<mat-card class="card2" appearance="outlined">
+    <mat-card-content>
+        <div class="login_signup_buttons">
+            <button class="login_page_button">
+                <h2>LOGIN</h2>
+            </button>
+            <button class="login_page_button" routerLink="/signup">
+                <h2 style="color: gray;">SIGNUP</h2>
+            </button>
+        </div>
+        <div class="fields">
+            <div class="form_fields">
+                <label >Email Id</label>
+                <div>
+                    <input  class="form_fields1" matInput placeholder="Email" formControlName="email">
+                   </div>
+            </div>
+            <div class="form_fields">
+                <label >Password</label>
+               <div>
+                  <input  class="form_fields1" type="password" matInput placeholder="Password" formControlName="password">
+                  <button routerLink="/forgotpassword" class="forgot_message" mat-button>Forgot Password?</button>
+               </div>
+            </div>
+        <div>
+            <button routerLink="/dashboard" class="login_button" mat-flat-button>Login</button>
+        </div>
+        <div class="container">
+            <span  style="margin-top: -12px; color: lightgray;">______________  </span>
+            <span class="or-text"> OR </span>
+            <span style="margin-top: -12px;  color: lightgray;">  ______________</span>
+        </div>
+
+        <div class="bottom_buutons">
+            <div>
+                <button class="fb_button" mat-flat-button>Facebook</button>
+            </div>
+            <div>
+                <button class="google_btn" mat-flat-button>Google</button>
+            </div>
+        </div>
+        </div>
+    </mat-card-content>
+  </mat-card>
+</form>
+</div>

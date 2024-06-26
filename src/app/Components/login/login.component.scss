@@ -1,0 +1,141 @@
+.body{
+    background-color:#9D9D9D;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.card1{
+    top: 185px;
+left: 320px;
+width: 624px;
+height: 391px;
+background: #F5F5F5 0% 0% no-repeat padding-box;
+border-radius: 21px;
+opacity: 1;
+}
+
+.login_image{
+width: 240px;
+height: 240px;
+border-radius: 50%;
+margin-top: 45px;
+margin-left: 40px;
+margin-right: 326px;
+margin-bottom: 36px;
+}
+
+.font_size{
+    margin-top: -15px;
+    margin-left: 20px;
+}
+.login_page_button{
+    border: none;
+    background-color: transparent;
+    font-size: larger;
+    font-weight: 15px;
+    cursor: pointer;
+}
+
+.card2  {
+    top: 166px;
+left: 658px;
+width: 389px;
+height: 425px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 5px 15px #00000029;
+border: 1px solid #E4E4E4;
+border-radius: 6px;
+opacity: 1;
+position: absolute;
+}
+
+.login_signup_buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.form_fields{
+    display: flex;
+    flex-direction: column;
+    // width: 300px;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.form_fields1{
+    width: 302px;
+height: 35px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #E2E2E2;
+border-radius: 2px;
+outline:none;
+
+}
+.forgot_message{
+    border: none;
+    color: #9D9D9D!important;
+    background-color: transparent;
+    margin-left: 167px;
+    margin-top: -7px;
+    font-weight: 5px;
+   
+}
+
+.login_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A03037!important;
+    color: white!important;
+    width: 305px;
+    height: 35px;
+    margin-left: 15px;
+    margin-top: 25px;
+    border-radius: 5px;
+    border: 1px solid  #A03037;
+}
+.container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 50px;
+
+}
+
+.or-text {
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.hor_line{
+    display: flex;
+}
+
+
+.bottom_buutons{
+    display: flex;
+    align-items: center;
+   margin-top: 15px;
+}
+
+
+.fb_button{
+    width: 135px;
+    color: white!important;
+    background-color: #4266B2!important;
+    border-radius: 3px;
+    border: 1px solid #4266B2;
+    margin-left: 15px;
+}
+
+.google_btn{
+    width: 135px;
+    color: black!important;
+    background-color: #ECF0F1!important;
+    border-radius: 3px;
+    border: 1px solid #E4E4E4;
+    margin-left: 35px;
+}
+
