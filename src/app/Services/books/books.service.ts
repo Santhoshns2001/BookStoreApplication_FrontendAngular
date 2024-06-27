@@ -16,6 +16,15 @@ export class BooksService {
       })
     }
     return this.httpService.getMethodService('https://localhost:7216/api/Book/GetAllBooks',false,header)
+  } 
 
+  GetBookById(data:any){
+    let header = {
+      headers : new HttpHeaders({
+        'content-type':'application/json',
+      })
+    }
+    return this.httpService.getMethodService('https://localhost:7216/api/Book/GetById?bookId='+data.bookId, false, header);
   }
+
 }

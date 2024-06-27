@@ -1,7 +1,7 @@
 <div class="head">
     <div class="title">
         <h1 style="margin-top: 9px;">Books</h1>
-        <span>(8 Books)</span>
+        <span>({{booksList.length}} Books)</span>
     </div>
     <div>
         <button mat-button [matMenuTriggerFor]="menu" style="width: 150px; padding-top: 7px; border: 1px solid rgb(193, 179, 179);">
@@ -23,7 +23,7 @@
 
 <div class="getall_body">
   <div *ngFor="let books of booksList" >
-    <mat-card class="card" appearance="outlined">
+    <mat-card class="card" appearance="outlined" (click)="GetBook(books)">
       <div class="image_sec">
         <img class="image" src="{{books.image}}" alt="img">
       </div>

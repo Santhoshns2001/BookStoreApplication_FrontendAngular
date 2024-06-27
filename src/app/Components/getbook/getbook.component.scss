@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+}
+
+.body{
+    height: 80%;
+    width: 100%;
+    display: flex;
+   
+}
+
+
+.head{
+    display: flex;
+    margin-top: 17px;
+    gap:460px;
+}
+.title{
+    display: flex;
+    gap: 5px;
+    width: 200px;
+    align-items: center;
+    margin-left: 150px;
+}
+
+.home_button{
+    color: rgb(168, 161, 161);
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+.img_sec{
+  height: 80%;
+  width: 25%;
+//   background-color: aqua !important;
+  margin-left: 160px;
+  display: flex;
+  margin-top: 25px;
+}
+
+.slide_imagediv{
+    height: 65px;
+    width: 50px;
+    border: 1px solid maroon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide_img{
+    height: 55px;
+    width: 40px;
+}
+
+.main_imagediv{
+    height:370px;
+    width: 250px;
+    background-color: transparent;
+    // border: 1px solid rgb(162, 156, 156);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.big-img{
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border: solid 1px rgb(182, 175, 175);
+    padding: 20px;
+}
+
+.main_img{
+    height:100%;
+    width: 100%;
+}
+
+.button_sec{
+    height: 45px;
+    width: 250px;
+    // background-color: pink;
+    display: flex;
+    flex-direction: row;
+    // margin-left: 213px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.addtobag_btn{
+    height: 30px;
+    width: 117px;
+    background-color: #A03037;
+    color: white;
+    border: none;
+    border-radius: 2px;
+}
+
+
+.wishlist_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:6px;
+    height: 30px;
+    width: 117px;
+    background-color: #333333;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    
+}
+
+.right_sidepart{
+    height: 100%;
+    width: 50%;
+    // background-color: aqua;
+}
+
+.s2{
+    height: 40%;
+    width: 100%;
+     background-color: transparent;
+     margin-top: 25px;
+ }
+ 
+ .title_sec{
+    font-size: 22px;
+     font-weight: 500;
+     margin-top: 10px;
+     margin-left: 15px;
+ }
+ 
+ .author_sec{
+    font-size: 14px;
+     color: rgb(182, 179, 179) !important;
+     margin-top: -7px;
+     margin-left: 15px;
+ }
+
+ .rating_sec{
+    height: 17px;
+    width: 40px;
+    background-color: rgb(9, 151, 9);
+    margin-top: -10px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:2px ;
+    
+}
+.star{
+    padding-top: 15px;
+    color: white !important;
+    margin-right: 4px;
+}
+
+
+.rating_count{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: -10px;
+   
+}
+
+.price{
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-left: 15px;
+   
+}
+
+.price_sec{
+    display: flex;
+    flex-direction: row;
+}
+
+.originalprice{
+    font-size: 14px;
+    color: rgb(172, 168, 168);
+   margin-top: 10px;
+   margin-left: 7px;
+}
+
+.hor_line1{
+    color: rgb(183, 177, 177);
+    margin-top: -65px;
+    margin-left: 17px;
+}
+
+.book_detail{
+    height: 140px;
+    width: 100%;
+    // background-color: aqua;
+}
+
+.desc_heading{
+    margin-left: 35px;
+    margin-top: 25px;
+    color: rgb(165, 160, 160);
+
+}
+.hor_line2{
+    color: rgb(183, 177, 177);
+    margin-top: 0px;
+    margin-left: 17px;
+}
+
+.feedback_heading{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-left: 32px;
+}

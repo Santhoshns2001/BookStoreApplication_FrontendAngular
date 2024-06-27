@@ -25,6 +25,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { GetallbooksComponent } from './Components/getallbooks/getallbooks.component';
 import { ForgotpasswordComponent } from './Components/forgotpassword/forgotpassword.component';
 import { BooksContainerComponent } from './Components/books-container/books-container.component';
+import { GetbookComponent } from './Components/getbook/getbook.component';
+import { CartsComponent } from './Components/carts/carts.component';
+
 
 
 
@@ -37,7 +40,10 @@ import { BooksContainerComponent } from './Components/books-container/books-cont
     DashboardComponent,
     GetallbooksComponent,
     ForgotpasswordComponent,
-    BooksContainerComponent
+    BooksContainerComponent,
+    GetbookComponent,
+    CartsComponent,
+  
   ],
   imports: [
     BrowserModule,

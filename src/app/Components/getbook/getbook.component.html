@@ -1,0 +1,64 @@
+<div class="container">
+
+    <div class="head">
+      <div class="title">
+        <button class="home_button" routerLink="/dashboard">Home /</button>
+        <p style="margin-top: 9px; font-size: 16px; margin-left: -3px;">Book({{book.bookId}})</p>
+      </div>
+    </div>
+
+    <div *ngIf="book" class="body">
+
+      <div class="img_sec">
+         <div class="slide_imagediv">
+             <img class="slide_img" src="{{book.image}}" alt="img">
+         </div> 
+         <div class="main_imagediv" > 
+            <div class="big-img">
+                <img class="main_img" src="{{book.image}}" alt="img">
+            </div>
+            
+            <div class="button_sec">
+                <button class="addtobag_btn" (click)="onAddToCart()">ADD TO BAG</button>
+                <button class="wishlist_btn"> <mat-icon style="font-size: 17px; margin-top: 5px;">favorite</mat-icon> WISHLIST</button>
+            </div>
+         </div> 
+      </div>
+      <div class="right_sidepart">
+        <div class="s2">
+            <p class="title_sec">{{book.title}}</p>
+            <p class="author_sec">{{book.author}}</p>
+            <div class="rating_count">
+               <div class="rating_sec">
+                 <p class="star">{{book.rating}} </p><img  src="../../assets/png/star.svg" alt="star">
+               </div>
+              <div>
+               <p style="color: rgb(176, 173, 173); margin-left: 10px;">({{book.ratingCount}})</p>
+              </div>
+            </div>
+            <div class="price_sec">
+               <div> 
+                  <p class="price">RS. {{book.price}}</p>
+               </div>
+               <div class="originalprice">
+                   <s >RS. {{book.originalPrice}}</s>
+               </div>
+            </div>
+       </div>
+       <hr class="hor_line1">
+
+       <div class="book_detail">
+          <ul class="desc_heading"><li>Book Detail</li></ul>
+          <div>
+            <p style="margin-left: 35px;">{{book.description}}</p>
+          </div>
+       </div>
+       <hr class="hor_line2">
+       <div>
+        <p class="feedback_heading">Customer Feedback</p>
+       </div>
+
+      </div>
+    </div>
+
+</div>
