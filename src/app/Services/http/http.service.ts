@@ -15,4 +15,12 @@ export class HttpService {
     return this.http.get(url,token && httpOptions)
   }
 
+  putMethod(url:string,reqData:any,token:boolean=true,httpOptions:any={}){
+    return this.http.put(url,reqData,token && httpOptions)
+  }
+
+  deleteMethod(url:string,token:boolean=true,httpOptions:any={}){
+    return this.http.delete(url,token && httpOptions)
+  }
+
 }

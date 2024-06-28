@@ -27,6 +27,7 @@ import { ForgotpasswordComponent } from './Components/forgotpassword/forgotpassw
 import { BooksContainerComponent } from './Components/books-container/books-container.component';
 import { GetbookComponent } from './Components/getbook/getbook.component';
 import { CartsComponent } from './Components/carts/carts.component';
+// import { AddressDetailsComponent } from './Components/address-details/address-details.component';
 
 
 
@@ -43,6 +44,7 @@ import { CartsComponent } from './Components/carts/carts.component';
     BooksContainerComponent,
     GetbookComponent,
     CartsComponent,
+    // AddressDetailsComponent,
   
   ],
   imports: [

@@ -43,12 +43,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 700px;
+  width: 490px;
   margin-left: 55px;
+  height: 33px;
   // margin-top: 15px;
  
   background-color:white;
-  border-radius: 7px;
+  border-radius: 3px;
   border: 1px solid lightgray;
   }
 
@@ -74,7 +75,7 @@
 }
 
 .icon_1{
-  border-right: 2px solid rgb(118, 58, 58);
+  border-right: 1px solid rgb(118, 58, 58);
   border-left: 1px solid rgb(118, 58, 58);
   height: 60px;
   width: 70px;

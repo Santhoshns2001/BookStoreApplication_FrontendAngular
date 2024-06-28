@@ -1,0 +1,287 @@
+.container{
+    height: 100%;
+    width: 100%;
+   
+}
+
+
+.head{
+    display: flex;
+    margin-top: 17px;
+    gap:460px;
+}
+.title{
+    display: flex;
+    gap: 5px;
+    width: 200px;
+    align-items: center;
+    margin-left: 150px;
+    margin-top: 5px;
+}
+
+.home_button{
+    color: rgb(168, 161, 161);
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+.cart_part{
+    height: auto;
+    width: 775px;
+    // background-color: orange;
+    margin-left: 150px;
+    border: 1px solid rgb(171, 162, 162);
+    
+   
+}
+.cart_header{
+display: flex;
+}
+
+.location_div{
+    height: 30px;
+    width: 250px;
+    // background-color: aqua;
+    margin-top: 15px;
+   margin-left: 405px;
+   border: 1px solid rgb(181, 177, 177);
+}
+
+.loc_button{
+    border: none;
+    background-color: transparent;
+    height: 30px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.image_sec{
+height: 100px;
+width: 75px;
+// background-color: aqua;
+margin-left: 25px;
+margin-top: 10px;
+align-items: center;
+
+}
+
+.image{
+height: 90px;
+width: 70px;
+}
+
+.s2{
+    width: 70%;
+     background-color: transparent;
+     margin-left: 20px;
+     
+     
+ }
+ 
+ .title_sec{
+     font-weight: 500;
+     margin-top: 15px;
+     margin-left: 15px;
+ }
+ 
+ .author_sec{
+     color: rgb(182, 179, 179) !important;
+     margin-top: -10px;
+     margin-left: 15px;
+ }
+ 
+ .price{
+     font-weight: 600;
+     margin-top: -10px;
+     margin-left: 15px;
+    
+ }
+ 
+ .price_sec{
+     display: flex;
+     flex-direction: row;
+ }
+ 
+ .originalprice{
+     color: rgb(172, 168, 168);
+    margin-top: -10px;
+    margin-left: 7px;
+   
+ }
+
+ .img_cost_sec{
+    height: auto;
+    width: 300px;
+    // background-color: aqua;
+    display: flex;
+    margin-bottom: 30px;
+ }
+
+ .quantity_sec{
+    display: flex;
+    width: 35px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(195, 188, 188);
+    margin-top: 12px;
+ }
+ .quantity{
+    display: flex;
+ }
+
+    
+ .order_btn{
+    display: flex;
+    color: white;
+    background-color: #3371B5;
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 495px;
+    margin-top: -3px;
+    cursor: pointer;
+ }
+
+ //sfg
+
+ .container{
+    margin-left: 170px;
+    margin-top: 7px;
+}
+.title{
+    display: flex;
+    gap: 5px;
+    width: 200px;
+    align-items: center;
+    justify-content: flex-start ;
+}
+.card{
+    width: 774px;
+    height: auto;
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+}
+.head2{
+    display: flex;
+    margin: 10px 30px;
+    justify-content: space-between;
+}
+.locBox{
+    display: flex;
+    border: 1px solid lightgray;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    width: 275px;
+    height: 40px;
+}
+.cart{
+    display: flex;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    border: 1px solid lightgrey;
+}
+.box{
+    width: 50px;
+    height: 30px;
+    border: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.orderbtn{
+    direction: rtl;
+    margin-right: 25px; 
+    background-color: rgb(76, 76, 210); 
+    color: white;
+}
+.head2{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 40px;
+    align-items: center;
+}
+.first{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+
+}
+.imgg{
+    padding-right: 33px;
+    width: 65%;
+    height: 60%;
+}
+.text{
+    font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+}
+.hint{
+    margin-top: -13px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+}
+.formItem{
+    display: flex;
+    flex-direction: column;
+}
+.radio{
+    display:flex;
+    gap:60px;
+    margin-top:7px;
+
+}
+.radio input{
+    width:15px;
+    height:15px;
+    accent-color: brown;
+    margin-right: 5px;
+}
+.form{
+    width:512px;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+.formItem1{
+    display: flex;
+    flex-direction: column;
+    margin-left:20px;
+}
+.continue{
+    display: flex;
+    width:100%;
+    margin-left: 570px;
+    margin-bottom: 10px;
+}
+.continue button{
+    width: 172px;
+    background-color: rgb(68, 68, 219);
+    color: white;
+}
