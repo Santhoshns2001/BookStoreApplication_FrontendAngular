@@ -6,7 +6,7 @@
       </div>
   </div>
 
-  <div class="cart_part">
+  <mat-card class="cart_part">
       <div class="cart_header">
           <div>
               <p style="margin-top: 15px; font-size: 16px; margin-left: 25px;">My cart({{cartsList.length}})</p>
@@ -50,99 +50,48 @@
                           </button>
                       </div>
                       <div>
-                          <button class="order_btn" mat-button *ngIf="!address" (click)="address = true; checkout(carts);">Place Order</button>
+                        <button class="order_btn" *ngIf="!ifPlaceOrderClicked" (click)="onPlaceOrder(carts)">PLACE ORDER</button>
                       </div>
                   </div>  <!--  s2 closing div -->
               </div> <!--  img and cost section closing div -->
           </div><!--  ng for  section closing div -->
       </div><!-- outer ng for  section closing div -->
-  </div> <!--  cart_part  section closing div -->
+  </mat-card> <!--  cart_part  section closing div -->
 
-  <!-- Address part -->
-  <div class="card">
-    <h2 *ngIf="!address" style="font-weight: 400; margin-left: 40px;">Address Details</h2>
-    <div *ngIf="address">
-        <div class="head2">
-            <h2 style="font-weight: 400;">Customer Details</h2>
-            <button mat-flat-button style="border: 1px solid #A03037; border-radius: 2px; color: #A03037; font-size: 15px;">Add New Address</button>
-        </div>
-        <div class="form">
-            <form [formGroup]="AddressForm" (ngSubmit)="AddAddress()">
-                <div class="first">
-                  <div class="formItem">
-                    <label>Full Name</label>
-                    <mat-form-field appearance="outline">
-                      <input matInput placeholder="Full Name" formControlName="fullName">
-                    </mat-form-field>
-                  </div>
-                  <div class="formItem1">
-                    <label>Mobile Number</label>
-                    <mat-form-field appearance="outline">
-                      <input matInput placeholder="Mobile Number" formControlName="mobile">
-                    </mat-form-field>
-                  </div>
-                </div>
-                <div style="display: flex; flex-direction: column; width:87%">
-                    <label>Address</label>
-                  <mat-form-field appearance="outline">
-                    <input matInput placeholder="Enter your Address..." formControlName="address">
-                  </mat-form-field>
-                </div>
-                <div class="first">
-                  <div class="formItem">
-                    <label>city/town</label>
-                    <mat-form-field appearance="outline">
-                      <input matInput placeholder="city" formControlName="city">
-                    </mat-form-field>
-                  </div>
-                  <div class="formItem1">
-                    <label>State</label>
-                    <mat-form-field appearance="outline">
-                      <input matInput placeholder="State" formControlName="state">
-                    </mat-form-field>
-                  </div>
-                </div>
-                <div class="formItem">
-                    <label>Type</label>
-                    <div class="radio">
-                        <div>
-                            <input type="radio" name="radio" value="home" formControlName="type">
-                            <span>Home</span>
-                        </div>
-                        <div>
-                            <input type="radio" name="radio" vlaue="work" formControlName="type">
-                            <span>Work</span>
-                        </div>
-                        <div>
-                            <input type="radio" name="radio" value="other" formControlName="type">
-                            <span>Other</span>
-                        </div>
+  <br><br><br>
+
+  <mat-card *ngIf="!ifPlaceOrderClicked" class="address-details-card">
+    <h4>Address Details</h4>
+</mat-card>
+
+<app-address-details *ngIf="ifPlaceOrderClicked" [addressList]="addressArray"
+    (addressAdded)="onAddressAdded($event)" (addressSelected)="onAddressSelected($event)"></app-address-details>
+
+<mat-accordion style="margin-left: 150px;" id="mat-accordion">
+    <mat-expansion-panel [expanded]="step() === 1" (opened)="setStep(1)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title> Order Summary </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div *ngIf="selectedCart && selectedAddress">
+            <div class="cart-content-left-content-div">
+                <img [src]="selectedCart.image" alt="cart-image">
+                <div class="cart-content-left-content-div-description">
+                    <h1>{{selectedCart.title}}</h1>
+                    <p>{{selectedCart.author}}</p>
+                    <div class="cart-price">
+                        <h1>Rs.{{selectedCart.finalBookPrice}}</h1>
+                        <p><del>Rs.{{selectedCart.originalBookPrice}}</del></p>
                     </div>
                 </div>
-                <div class="continue">
-                    <button mat-flat-button *ngIf="!order" (click)="order=true; AddAddress();">CONTINUE</button>                
-                </div>
-            </form>
-        </div>
-        
-    </div>
-</div>
-<div class="card">
-    <h2 style="margin:10px 0 0 40px; "> Order summary</h2>
-    <div *ngIf="order" class="cart">
-        <div><img style="width: 65px; height: 85px;" src="{{cartOrder.image}}" alt=""></div>
-        <div class="details">
-            <h3>{{cartOrder.title}}</h3>
-            <h5 style="color: lightgray; margin-top: -15px;">by {{cartOrder.author}}</h5>
-            <div style="display: flex; gap: 5px; margin-top: -10px;">
-                <div style="font-weight: 500;">Rs.{{cartOrder.originalBookPrice}}</div>
-                <div style="color: #878787;"><s>Rs.{{cartOrder.finalBookPrice}}</s></div>
+            </div>
+            <div class="placeorder-btn" id="checkout-btn">
+                <button (click)="onCheckout(selectedCart)">CHECKOUT</button>
             </div>
         </div>
-        <div style=" display: flex; align-items: flex-end; justify-content: end; width: 100%;">
-            <button mat-button class="orderbtn" *ngIf="order" (click)="placeOrder();" >CHECKOUT</button>
-        </div>
-    </div>
-</div>
+       
+    </mat-expansion-panel>
+</mat-accordion>
+
+<br><br><br>
 
 </div>

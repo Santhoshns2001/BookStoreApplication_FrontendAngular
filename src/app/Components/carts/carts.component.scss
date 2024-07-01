@@ -1,9 +1,8 @@
 .container{
     height: 100%;
     width: 100%;
-   
+    
 }
-
 
 .head{
     display: flex;
@@ -15,7 +14,7 @@
     gap: 5px;
     width: 200px;
     align-items: center;
-    margin-left: 150px;
+     margin-left: 150px;
     margin-top: 5px;
 }
 
@@ -30,8 +29,9 @@
     height: auto;
     width: 775px;
     // background-color: orange;
-    margin-left: 150px;
-    border: 1px solid rgb(171, 162, 162);
+     margin-left: 150px;
+    // border: 1px solid rgb(171, 162, 162);
+    
     
    
 }
@@ -137,7 +137,7 @@ width: 70px;
     
  .order_btn{
     display: flex;
-    color: white;
+    color: white !important;
     background-color: #3371B5;
     width: 150px;
     height: 30px;
@@ -151,137 +151,111 @@ width: 70px;
     cursor: pointer;
  }
 
- //sfg
+ .address-details-card {
+    width: 775px;
+    display: flex;
+    padding-top: 12px;
+    padding-left: 35px;
+    margin-left: 150px;
+}
 
- .container{
-    margin-left: 170px;
-    margin-top: 7px;
+.address-details-card h4 {
+    font-size: 15px;
+    
 }
-.title{
+
+
+#mat-accordion {
+    margin-top: 40px;
+}
+
+mat-accordion {
+    width: 775px;
+}
+
+mat-expansion-panel-header button {
+    border: solid 1px crimson;
+    height: 27px;
+    width: 140px;
+    font-size: 11px;
+    letter-spacing: .5px;
+    color: crimson;
+}
+
+mat-expansion-panel {
+    width: 755px;
+    margin-top: 40px;
+    padding: 0px 9px;
+    margin-left: 150px;
+}
+
+.m1 {
+    margin-top: 40px;
+}
+
+#checkout-btn {
+    margin-top: -10px;
+    margin-left: 540px;
+}
+
+.cart-content-left-content-div {
     display: flex;
-    gap: 5px;
-    width: 200px;
-    align-items: center;
-    justify-content: flex-start ;
+    height: 40%;
+   
+    gap: 30px;
 }
-.card{
-    width: 774px;
-    height: auto;
-    border: 1px solid lightgray;
-    margin-bottom: 20px;
+
+.cart-content-left-content-div img {
+    height: 85px;
+    width: 70px;
 }
-.head2{
-    display: flex;
-    margin: 10px 30px;
-    justify-content: space-between;
-}
-.locBox{
-    display: flex;
-    border: 1px solid lightgray;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    width: 275px;
-    height: 40px;
-}
-.cart{
-    display: flex;
-    margin-left: 40px;
-    margin-bottom: 30px;
-}
-.details{
+
+.cart-content-left-content-div-description {
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
+    margin-top: -8px;
 }
-.circle{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 15px;
-    height: 15px;
-    border: 1px solid lightgrey;
-}
-.box{
-    width: 50px;
-    height: 30px;
-    border: 1px solid lightgrey;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.orderbtn{
-    direction: rtl;
-    margin-right: 25px; 
-    background-color: rgb(76, 76, 210); 
-    color: white;
-}
-.head2{
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 40px;
-    align-items: center;
-}
-.first{
-    display: flex;
-    flex-direction: row;
-    margin-top: 10px;
 
+.cart-content-left-content-div-description h1 {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 500;
 }
-.imgg{
-    padding-right: 33px;
-    width: 65%;
-    height: 60%;
-}
-.text{
-    font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
-}
-.hint{
+
+.cart-content-left-content-div-description p {
+    font-size: 13px;
+    font-weight: 500;
+    color: gray;
     margin-top: -13px;
-    padding-left: 10px;
-    font-size: 14px;
 }
-.main{
-    display: flex;
-    flex-direction: row;
-}
-.formItem{
-    display: flex;
-    flex-direction: column;
-}
-.radio{
-    display:flex;
-    gap:60px;
-    margin-top:7px;
 
-}
-.radio input{
-    width:15px;
-    height:15px;
-    accent-color: brown;
-    margin-right: 5px;
-}
-.form{
-    width:512px;
-    height:auto;
-    display:flex;
-    flex-direction: column;
-    margin-left: 40px;
-    margin-bottom: 30px;
-}
-.formItem1{
+.cart-price {
     display: flex;
-    flex-direction: column;
-    margin-left:20px;
+    align-items: center;
+    gap: 10px;
+    margin-top: -4px;
 }
-.continue{
+
+.cart-price h1 {
+    font-size: 16px;
+    margin-top: -7px;
+}
+
+.placeorder-btn {
     display: flex;
-    width:100%;
-    margin-left: 570px;
-    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 88px;
 }
-.continue button{
-    width: 172px;
-    background-color: rgb(68, 68, 219);
+
+.placeorder-btn button {
+    height: 30px;
+    width: 130px;
+    background-color: #3371B5;
     color: white;
+    font-size: 12px;
+    letter-spacing: .5px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
 }

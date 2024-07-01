@@ -27,7 +27,12 @@ import { ForgotpasswordComponent } from './Components/forgotpassword/forgotpassw
 import { BooksContainerComponent } from './Components/books-container/books-container.component';
 import { GetbookComponent } from './Components/getbook/getbook.component';
 import { CartsComponent } from './Components/carts/carts.component';
+import { AddressDetailsComponent } from './Components/address-details/address-details.component';
 // import { AddressDetailsComponent } from './Components/address-details/address-details.component';
+import { MatRadioModule, MatRadioButton } from '@angular/material/radio';
+import { OrdersComponent } from './Components/orders/orders.component';
+import { OrderCompletedpageComponent } from './Components/order-completedpage/order-completedpage.component';
+import { WishlistComponent } from './Components/wishlist/wishlist.component';
 
 
 
@@ -44,6 +49,10 @@ import { CartsComponent } from './Components/carts/carts.component';
     BooksContainerComponent,
     GetbookComponent,
     CartsComponent,
+    AddressDetailsComponent,
+    OrdersComponent,
+    OrderCompletedpageComponent,
+    WishlistComponent,
     // AddressDetailsComponent,
   
   ],
@@ -58,7 +67,7 @@ import { CartsComponent } from './Components/carts/carts.component';
     ReactiveFormsModule,
     HttpClientModule,
     MatToolbarModule,MatSelectModule,MatCheckboxModule,MatSidenavModule,MatIconModule,
-    MatListModule,MatExpansionModule,MatMenuModule,MatDialogModule
+    MatListModule,MatExpansionModule,MatMenuModule,MatDialogModule,MatRadioModule,MatRadioButton
 
   ],
   providers: [

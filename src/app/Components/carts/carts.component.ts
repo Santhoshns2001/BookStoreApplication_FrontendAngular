@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, signal } from '@angular/core';
 import { CartService } from '../../Services/cart/cart.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -12,12 +12,12 @@ import { OrderService } from '../../Services/order/order.service';
 })
 export class CartsComponent implements OnInit{
 
-@Input() cartsList:any;
-AddressForm!:FormGroup;
-address:boolean=false;
-cartOrder:any;
-order:boolean=false;
-addressId:any;
+cartsList:any;
+bookCount: any;
+selectedCart: any;
+selectedAddress: any;
+addressArray: any;
+ifPlaceOrderClicked: boolean = false;
 
   constructor(
     private cart:CartService,
@@ -28,16 +28,20 @@ addressId:any;
 
   ngOnInit(): void {
     this.GetAllCarts();
-    this.AddressForm=this.formbuilder.group({
-      fullName:[''],
-      mobile:[''],
-      address:[''],
-      city:[''],
-      state:[''],
-      type:['']
-    });
+    this.FetchUserAddresses();
+    // this.AddressForm=this.formbuilder.group({
+    //   fullName:[''],
+    //   mobile:[''],
+    //   address:[''],
+    //   city:[''],
+    //   state:[''],
+    //   type:['']
+    // });
   }
 
+  ifCartList() {
+    return this.cartsList ? true : false;
+  }
   GetAllCarts(){
     this.cart.GetAllCart().subscribe((res:any)=>{
       console.log(res);
@@ -79,35 +83,64 @@ addressId:any;
     })
   }
 
+  onPlaceOrder(cart: any) {
+    this.selectedCart = cart;
+    this.ifPlaceOrderClicked = true;
+    console.log(this.selectedCart)
+  }
+  
 
-  checkout(carts:any){
-    console.log(carts);
-    this.cartOrder=carts;
+  step = signal(0);
+
+  setStep(index: number) {
+    this.step.set(index);
   }
 
-  AddAddress(){
-    let data={
-      fullName:this.AddressForm.value.fullName,
-      mobile:this.AddressForm.value.mobile,
-      address:this.AddressForm.value.address,
-      city:this.AddressForm.value.city,
-      state:this.AddressForm.value.state,
-      type:this.AddressForm.value.type
-    }
-    this.addressService.AddAddress(data).subscribe((response:any)=>{
+  nextStep() {
+    this.step.update(i => i + 1);
+  }
+
+  prevStep() {
+    this.step.update(i => i - 1);
+  }
+
+  FetchUserAddresses() {
+    this.addressService.FetchUserAddresses().subscribe((response: any) => {
       console.log(response);
-      this.addressId=response.data.addressId;
+      this.addressArray = response.data;
     })
   }
 
-  placeOrder(){
-    let data={
-      cartId:this.cartOrder.cartId,
-      addressId:this.addressId
+  onAddressAdded(newAddress: any) {
+    this.selectedAddress = newAddress;
+    console.log(this.selectedAddress)
+    this.addressArray.push(newAddress);
+    this.FetchUserAddresses();
+  }
+
+  onAddressSelected(selectedAddress: any) {
+    console.log('Selected Address:', selectedAddress);
+    this.selectedAddress = selectedAddress;
+    this.step.update(i => i + 1);
+    console.log(this.selectedAddress)
+  }
+
+  onCheckout(cart: any) {
+    // this.selectedAddress = localStorage.getItem("selectedAddress");
+    console.log(this.selectedAddress)
+    if (this.selectedAddress) {
+      // this.selectedAddress = JSON.parse(this.selectedAddress);
+      let data = {
+        cartId: this.selectedCart.cartId,
+        addressId: this.selectedAddress.addressId
+      }
+      this.orderService.PlaceOrder(data).subscribe((response: any) => {
+        console.log(response)
+        // localStorage.removeItem("selectedAddress");
+        this.router.navigateByUrl('/bookstore/ordersuccess')
+      })
     }
-    this.orderService.PlaceOrder(data).subscribe((response:any)=>{
-      console.log(response);
-    })
+
   }
 
 

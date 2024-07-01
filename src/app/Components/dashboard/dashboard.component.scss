@@ -39,19 +39,64 @@
   
 }
 
-.input_field{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 490px;
-  margin-left: 55px;
-  height: 33px;
-  // margin-top: 15px;
+// .input_field{
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 490px;
+//   margin-left: 55px;
+//   height: 33px;
+//   // margin-top: 15px;
  
-  background-color:white;
-  border-radius: 3px;
-  border: 1px solid lightgray;
-  }
+//   background-color:white;
+//   border-radius: 3px;
+//   border: 1px solid lightgray;
+//   }
+
+  .nav-bar-content-s2 {
+    width: 550px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f3f4;
+    border-radius: 3px;
+    margin-left: 25px;
+}
+
+.nav-bar-content-s2-input {
+    width: 500px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .8px;
+    background-color: #f1f3f4;
+}
+
+.nav-bar-content-s2-input::placeholder {
+    color: #777;
+    /* Lighter color for placeholder text */
+}
+
+.focused {
+    background-color: white;
+}
+
+.focused-input {
+    background-color: white;
+    color: #000;
+    /* Even darker color for input text when focused */
+}
+
+.nav-bar-content-s2-input {
+    border: none;
+    border-radius: 10px;
+}
+
 
 
 .corner_icons{
@@ -90,4 +135,22 @@
   color: white;
   margin-top: 4px;
  margin-left: 9px;
+}
+
+.footer-toolbar {
+  background-color: black;
+  height: 50px !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: static;
+  bottom: 0px;
+}
+
+.footer-toolbar p {
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: white;
+  margin-left: 117px;
+  margin-top: 10px;
 }

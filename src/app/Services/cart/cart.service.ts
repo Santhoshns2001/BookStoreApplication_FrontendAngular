@@ -54,4 +54,7 @@ DeleteCart(data:any){
 
 }
 
+
+
+
 }

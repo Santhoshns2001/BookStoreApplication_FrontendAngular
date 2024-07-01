@@ -4,13 +4,25 @@
         <img class="keep_image" src="../../assets/images/education.svg">
         <p class="text1">Bookstore</p>
       </div> 
-        <div class="input_field">
+        <!-- <div class="input_field">
             <button mat-icon-button title="search">
                 <mat-icon style="color: #5f6368;">search</mat-icon>
             </button>
             <input style="width: 590px; height:25px; background-color: white; border: none; outline: none;" placeholder="Search">
             <button mat-icon-button title="close">
                 <mat-icon style="color: #5f6368;">close</mat-icon>
+            </button>
+        </div> -->
+        <div class="nav-bar-content-s2" [ngClass]=" {'focused': isFocused}">
+            <button mat-icon-button (click)="onFocus()"><mat-icon>
+                search
+            </mat-icon></button>
+            <input type="text" [(ngModel)]="value" placeholder="Search" (keyup)="search($event)"
+                class="nav-bar-content-s2-input" (focus)="onFocus()" (blur)="onBlur()"
+                [ngClass]="{'focused': isFocused}" #searchInput>
+            <button class="close-btn" *ngIf="isFocused || value" matSuffix mat-icon-button aria-label="Clear"
+                (click)="clearValue()">
+                <mat-icon>close</mat-icon>
             </button>
         </div>
         <div class="corner_icons">
@@ -30,8 +42,11 @@
     </mat-toolbar-row>
 </mat-toolbar>
 
-<router-outlet >
-    
-</router-outlet>
+<router-outlet ></router-outlet>
+
+<br><br><br>
+<div class="footer-toolbar">
+    <p>Copyright #&copy; 2020, Bookstore Private Limited. All Rights Reserved</p>
+</div>
 
 
